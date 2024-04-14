@@ -1,0 +1,2 @@
+ARGOCD APPS Seeder
+---
