@@ -26,3 +26,7 @@ spec:
       destination:
         server: '{{.url}}'
         namespace: guestbook
+      syncPolicy:
+        automated:
+          selfHeal: true
+          prune: true    
