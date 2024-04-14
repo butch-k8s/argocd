@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+  labels:
+    stage: dev
+spec: 
+  project: se
+  source:
+    repoURL: https://github.com/butch-k8s/apps-manifests
+    targetRevision: main
+    path: apps/nginx/overlays/dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
