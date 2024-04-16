@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mdk
+  namespace: argocd
+  labels:
+    stage: dev
+spec: 
+  project: se
+  source:
+    repoURL: https://github.com/butch-k8s/apps-manifests
+    targetRevision: main
+    path: apps/mdk/overlays/dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true  
