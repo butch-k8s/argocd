@@ -1,4 +1,4 @@
 resources:
  - apps/demo.yaml
- - apps/nginx.yaml
- - apps/mdk.yaml
+#  - apps/nginx.yaml
+#  - apps/mdk.yaml
