@@ -6,7 +6,7 @@ metadata:
   labels:
     stage: dev
 spec: 
-  project: se
+  project: default
   source:
     repoURL: https://github.com/butch-k8s/apps-manifests
     targetRevision: main
