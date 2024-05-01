@@ -1,20 +1,20 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: nginx
-  namespace: argocd
-  labels:
-    stage: dev
-spec: 
-  project: default
-  source:
-    repoURL: https://github.com/butch-k8s/apps-manifests
-    targetRevision: main
-    path: apps/nginx/overlays/dev
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: default
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true  
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: nginx
+#   namespace: argocd
+#   labels:
+#     stage: dev
+# spec: 
+#   project: default
+#   source:
+#     repoURL: https://github.com/butch-k8s/apps-manifests
+#     targetRevision: main
+#     path: apps/nginx/overlays/dev
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: default
+#   syncPolicy:
+#     automated:
+#       selfHeal: true
+#       prune: true  
